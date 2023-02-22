@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class ReportService {
     private final ReportRepository repository;
 
-    public Report findReport(LocalDate date) {
+    public Report getReport(LocalDate date) {
         return null;
     }
 }
