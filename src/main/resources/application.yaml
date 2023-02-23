@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      authentication-database: admin
+      authentication-database: daily-reports
       username: dispatcher
       password: dispatcher
       database: daily-reports

@@ -17,6 +17,7 @@ import java.time.LocalDate;
 @Document
 public class Report {
     @Id
+    
     private long id;
     @Indexed(unique = true)
     private LocalDate reportDate;
@@ -27,4 +28,5 @@ public class Report {
     private String SPUN;
     private String highway;
     private String dispatcherInspection;
+    private Dispatcher dispatcher;
 }
