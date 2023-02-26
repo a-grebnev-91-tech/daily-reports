@@ -10,6 +10,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import javax.validation.groups.Default;
 import java.time.LocalDate;
 
 @Slf4j
@@ -26,6 +28,7 @@ public class ReportController {
         return service.getReport(date);
     }
 
+    //TODO подумать над валидацией отчетов по дате (в прошлом? в будущем?)
     @PostMapping("/reports")
     public ReportDto createReport(@RequestBody @Validated(OnCreate.class) ReportDto dto) {
         log.info("Posted new report for the {}", dto.getReportDate());

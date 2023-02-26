@@ -1,4 +1,6 @@
 package a.grebnev.dailyreports.validation;
 
-public interface OnUpdate {
+import javax.validation.groups.Default;
+
+public interface OnUpdate extends Default {
 }
