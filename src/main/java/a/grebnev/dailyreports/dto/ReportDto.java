@@ -17,26 +17,26 @@ import static a.grebnev.dailyreports.util.Constants.DEFAULT_DATE_FORMAT;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ReportDto {
-    @Null(groups = OnCreate.class)
-    @NotNull(groups = OnUpdate.class)
+    @Null(groups = OnCreate.class, message = "should be null when created")
+    @NotNull(groups = OnUpdate.class, message = "could not be null when updated")
     private Long id;
-    @NotNull
+    @NotNull(message = "could not be null")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DEFAULT_DATE_FORMAT)
     private LocalDate reportDate;
-    @NotBlank
+    @NotBlank(message = "could not be blank")
     private String accident;
-    @NotBlank
+    @NotBlank(message = "could not be blank")
     private String gmo;
-    @NotBlank
+    @NotBlank(message = "could not be blank")
     private String powerSupply;
-    @NotBlank
+    @NotBlank(message = "could not be blank")
     private String apcs;
-    @NotBlank
+    @NotBlank(message = "could not be blank")
     private String spun;
-    @NotBlank
+    @NotBlank(message = "could not be blank")
     private String highway;
-    @NotBlank
+    @NotBlank(message = "could not be blank")
     private String dispatcherInspection;
-    @NotBlank
+    @NotBlank(message = "could not be blank")
     private String dispatcher;
 }
