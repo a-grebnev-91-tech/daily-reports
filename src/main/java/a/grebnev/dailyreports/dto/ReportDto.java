@@ -8,7 +8,6 @@ import lombok.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Null;
-import javax.validation.groups.Default;
 import java.time.LocalDate;
 
 import static a.grebnev.dailyreports.util.Constants.DEFAULT_DATE_FORMAT;
@@ -22,7 +21,7 @@ public class ReportDto {
     @NotNull(groups = OnUpdate.class)
     private Long id;
     @NotNull
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DEFAULT_DATE_FORMAT )
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DEFAULT_DATE_FORMAT)
     private LocalDate reportDate;
     @NotBlank
     private String accident;

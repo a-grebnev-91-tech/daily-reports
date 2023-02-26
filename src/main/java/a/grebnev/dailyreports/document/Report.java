@@ -17,15 +17,14 @@ import java.time.LocalDate;
 @Document
 public class Report {
     @Id
-    
     private long id;
     @Indexed(unique = true)
     private LocalDate reportDate;
     private String accident;
     private String gmo;
     private String powerSupply;
-    private String APCS;
-    private String SPUN;
+    private String apcs;
+    private String spun;
     private String highway;
     private String dispatcherInspection;
     private Dispatcher dispatcher;
